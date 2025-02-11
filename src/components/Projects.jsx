@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const Projects = () => {
@@ -30,28 +30,44 @@ const Projects = () => {
       tech: ["Solidity", "Python", "Slither"],
       link: "#",
     },
+    {
+      title: "Smart Tool",
+      description:
+        "Automated smart contract analysis tool that helps identify common vulnerabilities and security issues.",
+      image: "/project3.jpg",
+      category: "Security",
+      tech: ["Solidity", "Python", "Slither"],
+      link: "#",
+    },
     // Tambahkan proyek lainnya di sini
   ];
 
   const categories = ["All", "DeFi", "NFT", "Security", "DAO"];
   const [activeCategory, setActiveCategory] = useState("All");
   const [startIndex, setStartIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const filteredProjects =
     activeCategory === "All"
       ? projects
       : projects.filter((project) => project.category === activeCategory);
 
-  const projectsPerView = {
-    sm: 1,
-    md: 2,
-    lg: 3,
-  };
-
   const nextSlide = () => {
-    setStartIndex((prev) =>
-      Math.min(prev + 1, filteredProjects.length - projectsPerView.lg)
-    );
+    if (isMobile) {
+      setStartIndex((prev) => Math.min(prev + 1, filteredProjects.length - 1));
+    } else {
+      setStartIndex((prev) => Math.min(prev + 1, filteredProjects.length - 3));
+    }
   };
 
   const prevSlide = () => {
@@ -87,53 +103,53 @@ const Projects = () => {
 
         {/* Projects Carousel */}
         <div className="relative">
-          {/* Navigation Buttons */}
-          <div className="absolute inset-y-0 left-0 flex items-center">
+          {/* Navigation Buttons - dengan penyesuaian posisi dan z-index */}
+          <div className="absolute inset-y-0 -left-2 md:-left-4 flex items-center z-30">
             <button
               onClick={prevSlide}
               disabled={startIndex === 0}
-              className={`p-2 rounded-full bg-gray-800/80 text-white transform -translate-x-1/2 transition-opacity duration-300 ${
+              className={`p-2 rounded-full bg-gray-800/90 text-white transform transition-opacity duration-300 shadow-lg ${
                 startIndex === 0
                   ? "opacity-50 cursor-not-allowed"
                   : "hover:bg-gray-700"
               }`}
             >
-              <ChevronLeft className="w-6 h-6" />
+              <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
             </button>
           </div>
 
-          <div className="absolute inset-y-0 right-0 flex items-center">
+          <div className="absolute inset-y-0 -right-2 md:-right-4 flex items-center z-30">
             <button
               onClick={nextSlide}
               disabled={
-                startIndex >= filteredProjects.length - projectsPerView.lg
+                startIndex >= filteredProjects.length - (isMobile ? 1 : 3)
               }
-              className={`p-2 rounded-full bg-gray-800/80 text-white transform translate-x-1/2 transition-opacity duration-300 ${
-                startIndex >= filteredProjects.length - projectsPerView.lg
+              className={`p-2 rounded-full bg-gray-800/90 text-white transform transition-opacity duration-300 shadow-lg ${
+                startIndex >= filteredProjects.length - (isMobile ? 1 : 3)
                   ? "opacity-50 cursor-not-allowed"
                   : "hover:bg-gray-700"
               }`}
             >
-              <ChevronRight className="w-6 h-6" />
+              <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
             </button>
           </div>
 
-          {/* Projects Container */}
-          <div className="overflow-hidden px-8">
+          {/* Projects Container - dengan padding yang disesuaikan */}
+          <div className="overflow-hidden">
             <div
-              className="flex transition-transform duration-300 ease-out gap-6"
+              className="flex transition-transform duration-300 ease-out"
               style={{
                 transform: `translateX(-${
-                  startIndex * (100 / projectsPerView.lg)
+                  startIndex * (isMobile ? 100 : 33.333)
                 }%)`,
               }}
             >
               {filteredProjects.map((project, index) => (
                 <div
                   key={index}
-                  className="flex-none w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
+                  className="w-full flex-none px-4 md:w-1/2 lg:w-1/3"
                 >
-                  <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg overflow-hidden border border-gray-700 hover:border-blue-500/50 transition-all duration-300 group h-full">
+                  <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg overflow-hidden border border-gray-700 hover:border-blue-500/50 transition-all duration-300 group h-full flex flex-col">
                     {/* Project Image */}
                     <div className="relative aspect-video overflow-hidden">
                       <img
@@ -145,17 +161,17 @@ const Projects = () => {
                     </div>
 
                     {/* Project Info */}
-                    <div className="p-6">
-                      <div className="flex items-center justify-between mb-3">
-                        <h3 className="text-white pixel-font text-lg">
+                    <div className="p-6 flex flex-col flex-grow">
+                      <div className="flex flex-col gap-2 mb-3">
+                        <h3 className="text-white pixel-font text-lg break-words whitespace-normal">
                           {project.title}
                         </h3>
-                        <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs pixel-font">
+                        <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs pixel-font self-start">
                           {project.category}
                         </span>
                       </div>
 
-                      <p className="text-gray-300 text-sm mb-4">
+                      <p className="text-gray-300 text-sm mb-4 line-clamp-3 flex-grow">
                         {project.description}
                       </p>
 
@@ -164,7 +180,7 @@ const Projects = () => {
                         {project.tech.map((tech, techIndex) => (
                           <span
                             key={techIndex}
-                            className="px-2 py-1 bg-gray-700/50 text-gray-300 rounded-md text-xs"
+                            className="px-2 py-1 bg-gray-700/50 text-gray-300 rounded-md text-xs whitespace-nowrap"
                           >
                             {tech}
                           </span>
@@ -174,7 +190,7 @@ const Projects = () => {
                       {/* View Project Button */}
                       <a
                         href={project.link}
-                        className="inline-block w-full text-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white pixel-font text-sm rounded-lg transition-colors duration-300"
+                        className="inline-block w-full text-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white pixel-font text-sm rounded-lg transition-colors duration-300 mt-auto"
                       >
                         View Project
                       </a>
