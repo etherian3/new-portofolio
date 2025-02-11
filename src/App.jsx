@@ -4,6 +4,7 @@ import CardContainer from "./components/CardContainer";
 import Contact from "./components/Contact";
 import Navbar2 from "./components/Navbar2";
 import Services from "./components/Services";
+import Projects from "./components/Projects";
 
 function App() {
   return (
@@ -27,6 +28,10 @@ function App() {
           <section id="services" className="mb-12 md:mb-20">
             {/* Isi konten services */}
             <Services />
+          </section>
+
+          <section id="projects" className="mb-12 md:mb-20">
+            <Projects />
           </section>
 
           <section id="contact" className="mb-12 md:mb-20">
