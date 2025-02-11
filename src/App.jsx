@@ -37,7 +37,7 @@ function App() {
 
         <footer className="bg-gray-900 text-white py-6 md:py-8 mt-auto">
           <div className="container mx-auto text-center pixel-font text-xs md:text-sm px-4">
-            <p>© 2024 Your Name. All rights reserved.</p>
+            <p>© 2025 Etherian. All rights reserved.</p>
           </div>
         </footer>
       </div>
