@@ -94,7 +94,7 @@ const Navbar2 = () => {
                   onClick={toggleDraw}
                   className="text-gray-400 hover:text-white"
                 >
-                  <X className="h-6 w-6" />
+                  {/* <X className="h-6 w-6" /> */}
                 </button>
               </div>
               <nav className="space-y-4">
