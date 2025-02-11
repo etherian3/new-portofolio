@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+.pixel-font {
+  font-family: "Press Start 2P", cursive;
+}
+
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-image: url("./assets/images/3d-network-background.jpg");
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Responsive background image */
+.background-image {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-in forwards;
+}
+
+.animate-slide-up {
+  opacity: 0;
+  animation: slideUp 1s ease-out forwards;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .background-image {
+    background-attachment: scroll;
+  }
+
+  .pixel-font {
+    font-size: 90%;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 640px) {
+  .pixel-font {
+    font-size: 80%;
+    letter-spacing: -0.5px;
+  }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
