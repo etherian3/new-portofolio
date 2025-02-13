@@ -1,9 +1,10 @@
 const About = () => {
   const skills = [
-    { name: "Solidity", level: "90%" },
-    { name: "Smart Contracts", level: "85%" },
-    { name: "Web3.js", level: "80%" },
-    { name: "DApp Development", level: "85%" },
+    { name: "Solidity", level: "98%" },
+    { name: "Rust", level: "85%" },
+    { name: "JavaScript", level: "80%" },
+    { name: "React", level: "85%" },
+    { name: "DApp Development", level: "90%" },
   ];
 
   return (
