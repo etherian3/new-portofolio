@@ -2,22 +2,22 @@ const Contact = () => {
   const contactMethods = [
     {
       title: "Email",
-      value: "your.email@example.com",
+      value: "rianziwalker@gmail.com",
       icon: "📧",
     },
     {
       title: "Discord",
-      value: "yourusername#0000",
+      value: "@etherian3",
       icon: "💬",
     },
     {
       title: "GitHub",
-      value: "@yourusername",
+      value: "@etherian3",
       icon: "📚",
     },
     {
       title: "LinkedIn",
-      value: "your-linkedin",
+      value: "rianzi-hasan-albana",
       icon: "💼",
     },
   ];
