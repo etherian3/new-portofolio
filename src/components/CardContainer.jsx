@@ -29,12 +29,12 @@ const CardContainer = () => {
 
             <p className="text-sm md:text-base text-gray-300 pixel-font animate-slide-up delay-300">
               I specialize in building interactive smart contracts applications
-              and creating seamless user interface.
+              and creating web3 interfaces.
             </p>
 
             <p className="text-sm md:text-base text-gray-400 pixel-font animate-slide-up delay-500">
-              I love code and finance, problem-solving, and expanding new
-              technologies.
+              Blockchain is the future of technology, offering transparency and
+              security in efficient digital transactions.
             </p>
 
             {/* Tech Stack */}
