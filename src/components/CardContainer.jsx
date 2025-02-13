@@ -1,5 +1,9 @@
 import React from "react";
 import "../App.css"; // Pastikan untuk mengimpor CSS
+import nftMarketplace from "../assets/images/nft-marketplace.png";
+import defi from "../assets/images/defi.png";
+import web3notes from "../assets/images/web3notes.png";
+import dcl from "../assets/images/dcl.png";
 
 const CardContainer = () => {
   return (
@@ -11,11 +15,12 @@ const CardContainer = () => {
           <div className="space-y-5 md:space-y-6">
             <div className="space-y-2">
               <p className="text-blue-400 pixel-font text-xs md:text-sm animate-fade-in">
-                Welcome to my portfolio
+                Welcome to <span className="text-white">@Etherian</span>{" "}
+                portfolio
               </p>
-              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold pixel-font text-white animate-fade-in">
-                Rianzi Hasan Albana
-              </h1>
+              {/* <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold pixel-font text-white animate-fade-in">
+                Etherian
+              </h1> */}
               <h2 className="text-xl md:text-2xl lg:text-3xl font-bold pixel-font text-white animate-fade-in">
                 Smart Contracts
                 <span className="text-blue-400"> Engineer</span>
@@ -28,7 +33,8 @@ const CardContainer = () => {
             </p>
 
             <p className="text-sm md:text-base text-gray-400 pixel-font animate-slide-up delay-500">
-              I love coding, problem-solving, and learning new technologies.
+              I love code and finance, problem-solving, and expanding new
+              technologies.
             </p>
 
             {/* Tech Stack */}
@@ -37,7 +43,7 @@ const CardContainer = () => {
                 Solidity
               </span>
               <span className="px-3 py-1.5 bg-purple-500/20 text-purple-400 rounded-full text-xs pixel-font border border-purple-500/30">
-                Web3.js
+                DeFi
               </span>
               <span className="px-3 py-1.5 bg-green-500/20 text-green-400 rounded-full text-xs pixel-font border border-green-500/30">
                 DApps
@@ -69,12 +75,34 @@ const CardContainer = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl animate-pulse"></div>
             <div className="relative p-6">
               <div className="grid grid-cols-2 gap-3">
-                {[1, 2, 3, 4].map((item) => (
-                  <div
-                    key={item}
-                    className="aspect-square bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700/50 p-3 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
-                  ></div>
-                ))}
+                <div className="aspect-square bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700/50 p-3 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                  <img
+                    src={nftMarketplace}
+                    alt="NFT Marketplace Project"
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
+                <div className="aspect-square bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700/50 p-3 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                  <img
+                    src={defi}
+                    alt="DeFi Project"
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
+                <div className="aspect-square bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700/50 p-3 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                  <img
+                    src={web3notes}
+                    alt="Smart Contract Project"
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
+                <div className="aspect-square bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700/50 p-3 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                  <img
+                    src={dcl}
+                    alt="Blockchain Project"
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
               </div>
             </div>
           </div>
