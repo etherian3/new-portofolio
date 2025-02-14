@@ -1,5 +1,6 @@
 import React from "react";
 import "../App.css"; // Pastikan untuk mengimpor CSS
+import { Download } from "lucide-react"; // Import icon Download
 import nftMarketplace from "../assets/images/nft-marketplace.png";
 import defi from "../assets/images/defi.png";
 import web3notes from "../assets/images/web3notes.png";
@@ -15,7 +16,7 @@ const CardContainer = () => {
           <div className="space-y-5 md:space-y-6">
             <div className="space-y-2">
               <p className="text-blue-400 pixel-font text-xs md:text-sm animate-fade-in">
-                Welcome to <span className="text-white">@Etherian</span>{" "}
+                Welcome to <span className="text-white">Etherian</span>{" "}
                 portfolio
               </p>
               {/* <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold pixel-font text-white animate-fade-in">
@@ -32,10 +33,10 @@ const CardContainer = () => {
               and creating web3 interfaces.
             </p>
 
-            <p className="text-sm md:text-base text-gray-400 pixel-font animate-slide-up delay-500">
+            {/* <p className="text-sm md:text-base text-gray-400 pixel-font animate-slide-up delay-500">
               Blockchain is the future of technology, offering transparency and
               security in efficient digital transactions.
-            </p>
+            </p> */}
 
             {/* Tech Stack */}
             <div className="flex flex-wrap gap-2 animate-slide-up delay-700">
@@ -62,10 +63,12 @@ const CardContainer = () => {
                 Contact Me
               </a>
               <a
-                href="#projects"
-                className="px-5 py-2.5 bg-gray-800/50 hover:bg-gray-700/50 text-white pixel-font text-xs md:text-sm rounded-lg border border-gray-700 transition-all duration-300 hover:transform hover:scale-105"
+                href="/path-to-your-cv.pdf" // Ganti dengan path CV Anda
+                download="YourName-CV.pdf" // Ganti dengan nama file yang diinginkan saat didownload
+                className="px-5 py-2.5 bg-gray-800/50 hover:bg-gray-700/50 text-white pixel-font text-xs md:text-sm rounded-lg border border-gray-700 transition-all duration-300 hover:transform hover:scale-105 flex items-center gap-2"
               >
-                View Projects
+                Download Whitepaper (CV)
+                <Download className="w-4 h-4" />
               </a>
             </div>
           </div>
