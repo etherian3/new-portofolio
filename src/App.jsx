@@ -40,7 +40,7 @@ function App() {
           </section>
         </div>
 
-        <footer className="bg-gray-900 text-white py-6 md:py-8 mt-auto">
+        <footer className="bg-gray-900 text-white py-6 md:py-2 mt-auto">
           <div className="container mx-auto text-center pixel-font text-xs md:text-sm px-4">
             <p>© 2025 Etherian. All rights reserved.</p>
           </div>
