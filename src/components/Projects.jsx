@@ -30,7 +30,7 @@ const Projects = () => {
       description:
         "Automated smart contract analysis tool that helps identify common vulnerabilities and security issues.",
       image: dcl,
-      category: "Security",
+      category: "DApps",
       tech: ["Solidity", "Layer 2", "NodeJs"],
       link: "#",
     },
@@ -39,14 +39,14 @@ const Projects = () => {
       description:
         "Automated smart contract analysis tool that helps identify common vulnerabilities and security issues.",
       image: web3notes,
-      category: "Security",
+      category: "DApps",
       tech: ["Solidity", "JavaScript", "React"],
       link: "#",
     },
     // Tambahkan proyek lainnya di sini
   ];
 
-  const categories = ["All", "DeFi", "NFT", "Security", "DAO"];
+  const categories = ["All", "DeFi", "NFT", "DApps", "DAO"];
   const [activeCategory, setActiveCategory] = useState("All");
   const [startIndex, setStartIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
