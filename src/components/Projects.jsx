@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import nftMarketplace from "../assets/images/nft-marketplace.png";
+import defi from "../assets/images/defi.png";
+import dcl from "../assets/images/dcl.png";
+import web3notes from "../assets/images/web3notes.png";
 
 const Projects = () => {
   const projects = [
@@ -7,36 +11,36 @@ const Projects = () => {
       title: "DeFi Lending Platform",
       description:
         "A decentralized lending platform built with Solidity and React. Features include lending, borrowing, and yield farming capabilities.",
-      image: "/project1.jpg", // Ganti dengan path gambar proyek Anda
+      image: defi, // Ganti dengan path gambar proyek Anda
       category: "DeFi",
-      tech: ["Solidity", "Web3.js", "React"],
+      tech: ["Solidity", "Web3.js", "React", "Moralis"],
       link: "#",
     },
     {
       title: "NFT Marketplace",
       description:
         "Custom NFT marketplace allowing users to mint, buy, sell and trade NFTs with integrated wallet connection.",
-      image: "/project2.jpg",
+      image: nftMarketplace,
       category: "NFT",
       tech: ["Solidity", "IPFS", "Next.js"],
       link: "#",
     },
     {
-      title: "Smart Contract Audit Tool",
+      title: "Smart Contract Decentraland App",
       description:
         "Automated smart contract analysis tool that helps identify common vulnerabilities and security issues.",
-      image: "/project3.jpg",
+      image: dcl,
       category: "Security",
-      tech: ["Solidity", "Python", "Slither"],
+      tech: ["Solidity", "Layer 2", "NodeJs"],
       link: "#",
     },
     {
-      title: "Smart Tool",
+      title: "Decentralized Notes",
       description:
         "Automated smart contract analysis tool that helps identify common vulnerabilities and security issues.",
-      image: "/project3.jpg",
+      image: web3notes,
       category: "Security",
-      tech: ["Solidity", "Python", "Slither"],
+      tech: ["Solidity", "JavaScript", "React"],
       link: "#",
     },
     // Tambahkan proyek lainnya di sini
