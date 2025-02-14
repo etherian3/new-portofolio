@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { MenuIcon, X, Home } from "lucide-react";
+import { MenuIcon, Home } from "lucide-react";
 
 const Navbar2 = () => {
   const [isOpen, setIsOpen] = useState(false);
