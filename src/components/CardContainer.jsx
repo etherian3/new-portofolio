@@ -23,7 +23,7 @@ const CardContainer = () => {
                 Etherian
               </h1> */}
               <h2 className="text-xl md:text-2xl lg:text-3xl font-bold pixel-font text-white animate-fade-in">
-                Smart Contracts
+                - Smart Contracts
                 <span className="text-blue-400"> Engineer</span>
               </h2>
             </div>
