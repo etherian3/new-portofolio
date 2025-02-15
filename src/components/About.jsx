@@ -23,7 +23,7 @@ const About = () => {
               </div>
               <div>
                 <h2 className="text-white pixel-font text-sm md:text-base">
-                  Smart Contract Developer
+                  Smart Contract Engineer
                 </h2>
                 <p className="text-gray-400 text-xs md:text-sm">
                   3+ Years Experience
@@ -32,11 +32,18 @@ const About = () => {
             </div>
 
             <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-              In the role of building decentralized applications or DApps, smart
-              contracts are a very important part of the application
-              infrastructure. With efficient and secure smart contracts,
-              applications can be built with the best quality and satisfying
-              results.
+              Smart Contracts Engineers are specialized professionals
+              responsible for designing, developing, and implementing smart
+              contracts—self-executing agreements with terms encoded directly
+              into software. Their role involves drafting precise contract
+              logic, conducting rigorous security audits, and ensuring
+              compliance with legal standards, all of which require a high
+              degree of precision. Given the immutable nature of blockchain
+              technology, even minor errors can lead to significant financial
+              losses, making meticulous coding practices essential. They must
+              also stay updated on advancements in blockchain technology and
+              collaborate with cross-functional teams to ensure that automated
+              agreements operate securely and efficiently.
             </p>
 
             <div className="flex flex-wrap gap-3">
@@ -51,6 +58,9 @@ const About = () => {
               </span>
               <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-xs pixel-font">
                 NFT
+              </span>
+              <span className="px-3 py-1 bg-black text-green-300 rounded-full text-xs pixel-font">
+                Rust
               </span>
             </div>
           </div>
