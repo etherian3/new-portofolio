@@ -16,7 +16,10 @@ const CardContainer = () => {
           <div className="space-y-5 md:space-y-6">
             <div className="space-y-2">
               <p className="text-blue-400 pixel-font text-xs md:text-sm animate-fade-in">
-                Welcome to <span className="text-white">Etherian</span>{" "}
+                Welcome to{" "}
+                <span className="text-white hover:opacity-80">
+                  <a href="#">Etherian</a>
+                </span>{" "}
                 portfolio
               </p>
               {/* <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold pixel-font text-white animate-fade-in">
