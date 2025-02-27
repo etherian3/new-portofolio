@@ -20,7 +20,7 @@ const About = () => {
         <div className="bg-gray-800/50 backdrop-blur-sm p-6 md:p-8 rounded-lg border border-gray-700">
           <div className="space-y-6">
             <div className="flex items-center space-x-4 mb-6">
-              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden">
+              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden hidden md:block">
                 <img
                   src={LOE}
                   alt="Your Name"
