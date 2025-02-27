@@ -78,7 +78,7 @@ const CardContainer = () => {
           </div>
 
           {/* Right Side - Decorative Elements */}
-          <div className="hidden md:block relative">
+          <div className="hidden md:block relative mt-[-15px]">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl animate-pulse"></div>
             <div className="relative p-6">
               <div className="grid grid-cols-2 gap-3">
