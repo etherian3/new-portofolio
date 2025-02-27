@@ -59,12 +59,13 @@ const CardContainer = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-3 animate-slide-up delay-1000">
-              <a
+              {/* Contact me Button is Disable */}
+              {/* <a
                 href="#contact"
                 className="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white pixel-font text-xs md:text-sm rounded-lg transition-all duration-300 hover:transform hover:scale-105"
               >
                 Contact Me
-              </a>
+              </a> */}
               <a
                 href="/path-to-your-cv.pdf" // Ganti dengan path CV Anda
                 download="YourName-CV.pdf" // Ganti dengan nama file yang diinginkan saat didownload
