@@ -23,7 +23,7 @@ const About = () => {
               </div>
               <div>
                 <h2 className="text-white pixel-font text-sm md:text-base">
-                  Smart Contract Engineer
+                  Smart Contract Developer
                 </h2>
                 <p className="text-gray-400 text-xs md:text-sm">
                   3+ Years Experience
