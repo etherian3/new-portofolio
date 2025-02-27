@@ -43,7 +43,7 @@ const CardContainer = () => {
 
             {/* Tech Stack */}
             <div className="flex flex-wrap gap-2 animate-slide-up delay-700">
-              <span className="px-3 py-1.5 bg-blue-500/20 text-blue-400 rounded-full text-xs pixel-font border border-blue-500/30">
+              <span className="px-3 py-1.5 bg-blue-500/20 text-slate-300 rounded-full text-xs pixel-font border border-blue-500/30">
                 Solidity
               </span>
               <span className="px-3 py-1.5 bg-purple-500/20 text-purple-400 rounded-full text-xs pixel-font border border-purple-500/30">
