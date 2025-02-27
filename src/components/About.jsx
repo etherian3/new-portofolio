@@ -56,7 +56,7 @@ const About = () => {
               <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs pixel-font">
                 Solidity
               </span>
-              <span className="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-xs pixel-font">
+              <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-xs pixel-font">
                 Web3
               </span>
               <span className="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs pixel-font">
@@ -66,7 +66,7 @@ const About = () => {
                 NFT
               </span>
               <span className="px-3 py-1 bg-black text-green-300 rounded-full text-xs pixel-font">
-                Rust
+                RWA
               </span>
             </div>
           </div>
