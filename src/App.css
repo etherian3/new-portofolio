@@ -14,8 +14,10 @@ body {
 
 body {
   font-family: "Roboto", sans-serif;
-  background-image: url("./assets/images/3d-network-background.jpg");
+  background-image: url("./assets/images/3d-network-blue.jpg");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 100vh;
   margin: 0;
 }
@@ -68,7 +70,7 @@ body {
 
 /* Responsive styles */
 @media (max-width: 768px) {
-  .background-image {
+  body {
     background-attachment: scroll;
   }
 
