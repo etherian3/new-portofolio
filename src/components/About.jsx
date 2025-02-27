@@ -1,3 +1,5 @@
+import LOE from "../assets/images/LOE.png";
+
 const About = () => {
   const skills = [
     { name: "Solidity", level: "98%" },
@@ -18,8 +20,12 @@ const About = () => {
         <div className="bg-gray-800/50 backdrop-blur-sm p-6 md:p-8 rounded-lg border border-gray-700">
           <div className="space-y-6">
             <div className="flex items-center space-x-4 mb-6">
-              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-blue-500 flex items-center justify-center text-3xl">
-                👨‍💻
+              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden">
+                <img
+                  src={LOE}
+                  alt="Your Name"
+                  className="w-full h-full object-cover md:rounded-full"
+                />
               </div>
               <div>
                 <h2 className="text-white pixel-font text-sm md:text-base">
