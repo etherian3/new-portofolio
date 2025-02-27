@@ -196,7 +196,7 @@ const Projects = () => {
                         href={project.link}
                         className="inline-block w-full text-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white pixel-font text-sm rounded-lg transition-colors duration-300 mt-auto"
                       >
-                        View Project
+                        See Contract
                       </a>
                     </div>
                   </div>
