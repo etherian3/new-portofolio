@@ -17,12 +17,60 @@ const Contact = () => {
   }, [state.succeeded]);
 
   const contactMethods = [
-    /* ... tetap sama ... */
+    {
+      title: "Email",
+      value: "your.email@example.com",
+      value: "rianziwalker@gmail.com",
+      icon: "📧",
+    },
+    {
+      title: "Discord",
+      value: "yourusername#0000",
+      value: "@etherian3",
+      icon: "💬",
+    },
+    {
+      title: "GitHub",
+      value: "@yourusername",
+      value: "@etherian3",
+      icon: "📚",
+    },
+    {
+      title: "LinkedIn",
+      value: "your-linkedin",
+      value: "rianzi-hasan-albana",
+      icon: "💼",
+    },
   ];
 
   return (
     <div className="flex flex-col items-center justify-center">
-      {/* ... bagian contact methods tetap sama ... */}
+      <h1 className="text-white md:text-4xl pixel-font mb-12 md:mb-16">
+        Contact
+      </h1>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full max-w-4xl">
+        {contactMethods.map((method, index) => (
+          <div
+            key={index}
+            className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg border border-gray-700 hover:border-gray-500 transition-all duration-300 cursor-pointer group"
+          >
+            <div className="flex items-center space-x-4">
+              <div className="text-3xl group-hover:scale-110 transition-transform duration-300">
+                {method.icon}
+              </div>
+              <div>
+                <h3 className="text-white pixel-font text-sm md:text-base mb-2">
+                  {method.title}
+                </h3>
+                <p className="text-gray-300 text-xs md:text-sm break-all">
+                  {method.value}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
 
       {/* Form Contact */}
       <div className="mt-12 w-full max-w-4xl">
