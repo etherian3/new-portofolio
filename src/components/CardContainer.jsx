@@ -5,6 +5,7 @@ import nftMarketplace from "../assets/images/nft-marketplace.png";
 import defi from "../assets/images/defi.png";
 import web3notes from "../assets/images/web3notes.png";
 import dcl from "../assets/images/dcl.png";
+import cv from "../assets/cv.pdf";
 
 const CardContainer = () => {
   const [isDownloading, setIsDownloading] = useState(false);
@@ -76,8 +77,8 @@ const CardContainer = () => {
                 Contact Me
               </a> */}
               <a
-                href={dcl} // Ganti dengan path CV Anda
-                download="dcl.png"
+                href={cv} // Ganti dengan path CV Anda
+                download="cv-etherian.pdf"
                 onClick={handleDownload} // Ganti dengan nama file yang diinginkan saat didownload
                 className="px-5 py-2.5 bg-gray-800/50 hover:bg-gray-700/50 text-white pixel-font text-xs md:text-sm rounded-lg border border-gray-700 transition-all duration-300 hover:transform hover:scale-105 flex items-center gap-2"
               >
