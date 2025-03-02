@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../App.css"; // Pastikan untuk mengimpor CSS
 import { Download } from "lucide-react"; // Import icon Download
 import nftMarketplace from "../assets/images/nft-marketplace.png";
@@ -7,6 +7,15 @@ import web3notes from "../assets/images/web3notes.png";
 import dcl from "../assets/images/dcl.png";
 
 const CardContainer = () => {
+  const [isDownloading, setIsDownloading] = useState(false);
+
+  const handleDownload = () => {
+    setIsDownloading(true);
+    setTimeout(() => {
+      setIsDownloading(false);
+    }, 2000);
+  };
+
   return (
     <div className="flex items-center justify-center min-h-[85vh] p-4 md:p-7 mt-16">
       <div className="max-w-5xl w-full text-white">
@@ -67,8 +76,9 @@ const CardContainer = () => {
                 Contact Me
               </a> */}
               <a
-                href="/path-to-your-cv.pdf" // Ganti dengan path CV Anda
-                download="YourName-CV.pdf" // Ganti dengan nama file yang diinginkan saat didownload
+                href={dcl} // Ganti dengan path CV Anda
+                download="dcl.png"
+                onClick={handleDownload} // Ganti dengan nama file yang diinginkan saat didownload
                 className="px-5 py-2.5 bg-gray-800/50 hover:bg-gray-700/50 text-white pixel-font text-xs md:text-sm rounded-lg border border-gray-700 transition-all duration-300 hover:transform hover:scale-105 flex items-center gap-2"
               >
                 Download Whitepaper (CV)
